@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Image Encoder & Decoder | Cybersecurity Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Base64 Image Encoder & Decoder</h1>
+            <p class="subtitle">Cybersecurity Project - Secure Image Encoding & Decoding Tool</p>
+            <div class="student-info">
+                <div class="info-card">
+                    <strong>Name:</strong> Sameer
+                </div>
+                <div class="info-card">
+                    <strong>College:</strong> Sunderdeep College Management and Technology
+                </div>
+                <div class="info-card">
+                    <strong>Course:</strong> BCA Final Year
+                </div>
+                <div class="info-card">
+                    <strong>Sec:</strong> B
+                </div>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="encoder">Encoder</div>
+            <div class="tab" data-tab="decoder">Decoder</div>
+        </div>
+        
+        <!-- Encoder Tab -->
+        <div class="tab-content active" id="encoder">
+            <div class="main-content">
+                <div class="card">
+                    <h2>Upload Image</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <p>Drag & Drop your image here</p>
+                        <p class="subtitle">or click to browse files</p>
+                        <input type="file" id="fileInput" class="file-input" accept="image/*">
+                    </div>
+                    
+                    <div class="file-info" id="fileInfo">
+                        No file selected
+                    </div>
+                    
+                    <div class="preview-container">
+                        <img id="previewImage" class="preview-image" style="display: none;">
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="generateBtn" disabled>
+                            <span>Generate Base64</span>
+                        </button>
+                        <button id="copyBtn" disabled class="secondary-btn">
+                            <span>Copy Code</span>
+                        </button>
+                        <button id="resetBtn" class="secondary-btn">
+                            <span>Reset</span>
+                        </button>
+                    </div>
+                    
+                    <div class="loading" id="loadingIndicator">
+                        <div class="spinner"></div>
+                        <p>Encoding image to Base64...</p>
+                    </div>
+                    
+                    <div class="success-message" id="successMessage">
+                        Base64 code successfully copied to clipboard!
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Base64 Output</h2>
+                    <div class="code-container">
+                        <pre id="codeOutput" class="code-output">Your Base64 encoded image will appear here...</pre>
+                    </div>
+                    
+                    <div class="stats">
+                        <div id="codeLength">Length: 0 characters</div>
+                        <div id="fileSize">Size: 0 KB</div>
+                    </div>
+                    
+                    <div class="cyber-info">
+                        <h3>Base64 Encoding Applications</h3>
+                        <ul>
+                            <li><strong>Data Obfuscation:</strong> Hide image data from casual inspection</li>
+                            <li><strong>Embedded Resources:</strong> Reduce HTTP requests by embedding images directly</li>
+                            <li><strong>Secure Transmission:</strong> Encode binary data for text-based protocols</li>
+                            <li><strong>Data Integrity:</strong> Ensure safe passage through systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decoder Tab -->
+        <div class="tab-content" id="decoder">
+            <div class="main-content">
+                <div class="card">
+                    <h2>Input Base64 Code</h2>
+                    <div class="textarea-container">
+                        <textarea id="base64Input" placeholder="Paste your Base64 encoded image data here..."></textarea>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="decodeBtn" class="warning-btn">
+                            <span>Decode Image</span>
+                        </button>
+                        <button id="clearBtn" class="secondary-btn">
+                            <span>Clear</span>
+                        </button>
+                    </div>
+                    
+                    <div class="loading" id="decodeLoading">
+                        <div class="spinner"></div>
+                        <p>Decoding Base64 to image...</p>
+                    </div>
+                    
+                    <div class="error-message" id="decodeError">
+                        Invalid Base64 image data. Please check your input.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Decoded Image</h2>
+                    <div class="decoded-preview">
+                        <img id="decodedImage" class="preview-image" style="display: none;">
+                    </div>
+                    
+                    <div class="file-info" id="decodedInfo">
+                        No image decoded yet
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="downloadBtn" disabled class="secondary-btn">
+                            <span>Download Image</span>
+                        </button>
+                    </div>
+                    
+                    <div class="cyber-info">
+                        <h3>Base64 Decoding Applications</h3>
+                        <ul>
+                            <li><strong>Data Recovery:</strong> Restore images from encoded text data</li>
+                            <li><strong>Forensic Analysis:</strong> Extract images from encoded sources</li>
+                            <li><strong>Data Verification:</strong> Validate integrity of encoded data</li>
+                            <li><strong>Security Research:</strong> Analyze encoded content for threats</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Advanced Base64 Image Encoder & Decoder | Cybersecurity Project | Sunderdeep College Management and Technology</p>
+            <p>Developed by Sameer | BCA Final Semester</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
